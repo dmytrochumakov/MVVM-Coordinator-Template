@@ -18,3 +18,18 @@ struct ___VARIABLE_productName:identifier___View: View {
     }
 
 }
+
+// MARK: - ___VARIABLE_productName:identifier___View_Previews
+
+struct ___VARIABLE_productName:identifier___View_Previews: PreviewProvider {
+  static var previews: some View {
+    let viewModel = ___VARIABLE_productName:identifier___ViewModel()
+  ___VARIABLE_productName:identifier___View(viewModel: viewModel)
+      .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+      .previewDisplayName("iPhone 8")
+
+  ___VARIABLE_productName:identifier___View(viewModel: viewModel)
+      .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+      .previewDisplayName("iPhone 14 Pro")
+  }
+}

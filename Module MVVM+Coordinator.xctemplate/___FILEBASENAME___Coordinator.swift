@@ -8,6 +8,7 @@
 import UIKit
 
 final class ___VARIABLE_productName:identifier___Coordinator: Coordinator {
+    var rootViewController: UIViewController?
     var childCoordinators: [Coordinator] = []
 }
 
@@ -15,7 +16,8 @@ final class ___VARIABLE_productName:identifier___Coordinator: Coordinator {
 extension ___VARIABLE_productName:identifier___Coordinator {
     
     func start() {
-        
+        let view = ___VARIABLE_productName:identifier___View(viewModel: .init())
+        rootViewController = HostingController(rootView: view)
     }
     
 }
