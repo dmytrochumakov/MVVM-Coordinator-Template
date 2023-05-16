@@ -7,15 +7,25 @@
 
 import SwiftUI
 
+// MARK: - ___VARIABLE_productName:identifier___View
+
 struct ___VARIABLE_productName:identifier___View: View {
 
-    @ObservedObject var viewModel: ___VARIABLE_productName:identifier___ViewModel
+    // MARK: Lifecycle
+
+    init(viewModel: ___VARIABLE_productName:identifier___ViewModel) {
+      self.viewModel = viewModel
+    }
 
     var body: some View {
         VStack {
 
         }
     }
+
+    // MARK: Private
+
+    @ObservedObject private var viewModel: ___VARIABLE_productName:identifier___ViewModel
 
 }
 
@@ -24,12 +34,13 @@ struct ___VARIABLE_productName:identifier___View: View {
 struct ___VARIABLE_productName:identifier___View_Previews: PreviewProvider {
   static var previews: some View {
     let viewModel = ___VARIABLE_productName:identifier___ViewModel()
-  ___VARIABLE_productName:identifier___View(viewModel: viewModel)
-      .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
-      .previewDisplayName("iPhone 8")
 
   ___VARIABLE_productName:identifier___View(viewModel: viewModel)
       .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
       .previewDisplayName("iPhone 14 Pro")
+
+  ___VARIABLE_productName:identifier___View(viewModel: viewModel)
+      .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+      .previewDisplayName("iPhone 8")
   }
 }
